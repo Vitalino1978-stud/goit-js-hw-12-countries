@@ -1,0 +1,33 @@
+.countriesCard-js {
+  width: 500px;
+  margin: auto;
+}
+.country-name {
+  font-size: 45px;
+  margin-left: 50px;
+}
+.country-description {
+  list-style: none;
+  margin-left: 10px;
+}
+.country-languges {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.county-capital {
+  font-size: 20px;
+}
+.country-population {
+  font-size: 20px;
+}
+.country-languages_item {
+  font-size: 20px;
+}
+.country-flag {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px;
+}
