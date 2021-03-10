@@ -20,7 +20,7 @@ refs.searchForm.addEventListener('input', debounce(onSearch, 500))
 function onSearch(event) {
   refs.output.innerHTML = '';
    
-  const searchQuery = event.target.value;
+  const searchQuery = event.target.value.trim();
   if (searchQuery === "") {
     return
   }
@@ -33,17 +33,18 @@ function onSearch(event) {
         text: 'erroorrrr',
         delay: 4000,
       });
-    }
+    } else 
     if (data.length <= 10 && data.length >= 2) {
             
       renderCountriesList(data);
-      
-      
-    }
+     }
+      else 
     if (data.length === 1) {
       renderCountryCard(data)
       // console.log("render card");
     }
+     
+   
 
    })
 
