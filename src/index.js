@@ -27,21 +27,24 @@ function onSearch(event) {
   
 
   API.fetchCountriesList(searchQuery).then(data => {
+    if (!data) return;
+    if (data.length === 0) {
+      
+      return
+    };
     if (data.length > 10) {
       console.warn("Too many items");
       error({
-        text: 'erroorrrr',
+        text: 'Too many items to show, please enter more specific query',
         delay: 4000,
       });
-    } else 
-    if (data.length <= 10 && data.length >= 2) {
+    } else if (data.length <= 10 && data.length > 1) {
             
       renderCountriesList(data);
      }
-      else 
-    if (data.length === 1) {
+      else if (data.length === 1) {
       renderCountryCard(data)
-      // console.log("render card");
+     
     }
      
    
