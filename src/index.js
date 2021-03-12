@@ -27,11 +27,9 @@ function onSearch(event) {
   
 
   API.fetchCountriesList(searchQuery).then(data => {
-    if (!data) return;
-    if (data.length === 0) {
-      
-      return
-    };
+    if (!data || !data.length) {
+  return
+  };
     if (data.length > 10) {
       console.warn("Too many items");
       error({
